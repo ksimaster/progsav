@@ -12,8 +12,8 @@ public class Collect : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            Player.score++;
-            scoreText.text = Player.score.ToString();
+            Progress.Instance.playerInfo.Coins++;
+            scoreText.text = Progress.Instance.playerInfo.Coins.ToString();
             Destroy(gameObject);
         }
     }
