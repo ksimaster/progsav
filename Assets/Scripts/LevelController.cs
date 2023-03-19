@@ -29,6 +29,7 @@ public class LevelController : MonoBehaviour
     public void ToNextLevel()
     {
         Progress.Instance.playerInfo.Level++;
+        Progress.Instance.Save();
         OpenLevel();
     }
 

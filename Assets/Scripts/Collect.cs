@@ -8,6 +8,10 @@ public class Collect : MonoBehaviour
     //private int score = 0;
     public Text scoreText;
 
+    private void Start()
+    {
+        scoreText.text = Progress.Instance.playerInfo.Coins.ToString();
+    }
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "Player")
